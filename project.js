@@ -1,203 +1,147 @@
-<<<<<<< HEAD
 let player = 'Player'
 let player2 = 'Player 2'
 const Rock = 'Rock'
 const Scissor = 'Scissor'
 const Paper = 'Paper'
 const Boulder = 'Boulder' 
+const gameresult = document.getElementById('gameresult')
+console.log(gameresult);
+gamer2result = document.getElementById('gamer2result')
+console.log(gamer2result);
+let loaded = true
+let isGameover = false
 const playBtn = document.getElementById('playBtn')
-const playBtn2 = document.getElementById('playBtn2')
+const resetBtn = document.getElementById('reset')
 const randomChoice = ['Rock', 'Paper', 'Scissor', 'Boulder']
 const generateVar = Math.floor(Math.random()*randomChoice.length)
 const generateVar2 = Math.floor(Math.random()*randomChoice.length)
 //!---------------------------------Generating random game variable and tying to Player 1----------------------------------------------------
-player = randomChoice[generateVar]
+function player1Game(){
+    player = randomChoice[generateVar]
+    console.log(generateVar);
 switch (randomChoice[generateVar]){
     case randomChoice[0]:
     console.log(Rock);
+    gameresult.textContent = randomChoice[generateVar]
         break;
     case randomChoice[1]:
     console.log(Paper);
+    gameresult.textContent = randomChoice[generateVar]
         break;
     case randomChoice[2]:
     console.log(Scissor);
+    gameresult.textContent = randomChoice[generateVar]
         break;
     case randomChoice[3]:
     console.log(Boulder);
+    gameresult.textContent = randomChoice[generateVar]
         break;
-}
+   
+}}
 //!------------------------------------Generating a random game variable and tying to Player 2 ---------------------------------------------------
-player2 = randomChoice[generateVar2]
+function player2Game(){
+    player2 = randomChoice[generateVar2]
 switch (randomChoice[generateVar2]){
     case randomChoice[0]:
     console.log(Rock);
+    gamer2result.textContent = randomChoice[generateVar2]
         break;
     case randomChoice[1]:
     console.log(Paper);
+    gamer2result.textContent = randomChoice[generateVar2]
         break;
     case randomChoice[2]:
     console.log(Scissor);
+    gamer2result.textContent = randomChoice[generateVar2]
         break;
     case randomChoice[3]:
     console.log(Boulder);
+    gamer2result.textContent = randomChoice[generateVar2]
         break;
-}
-//!-------------------------------------------The Event Listener for Player---------------------------------------------
-playBtn.addEventListener('click', function Game(){
-if(player === player2){
-    console.log('Tie');
-}
-else if(player ===  randomChoice[0] && player2 === randomChoice[1]){
-    console.log(`Player 2 wins`);
-    alert(`Player 2 Wins`)
-}
-else if(player === randomChoice[0] && player2 == randomChoice[2]){
-    console.log(`Player 1 Wins`);
-}
-else if(player == randomChoice[0] && player2 == randomChoice[3]){
-    console.log(`Player 2 wins`);
-}
-else if(player ===  randomChoice[1] && player2 === randomChoice[0]){
-    console.log(`Player 2 wins`);
-}
-else if(player ===  randomChoice[1] && player2 === randomChoice[2]){
-    console.log(`Player 2 wins`);
-}    
-else if(player ===  randomChoice[1] &&
-    player2 === randomChoice[3]){
-    console.log(`Player 2 wins`);
-}    
-else if(player ===  randomChoice[2] && player2 === randomChoice[0]){
-    console.log(`Player 2 wins`);
-}    
-else if(player ===  randomChoice[2] && player2 === randomChoice[1]){
-    console.log(`Player 2 wins`);
-}    
-else if(player ===  randomChoice[2] && player2 === randomChoice[3]){
-    console.log(`Player 2 wins`);
-}
-else if(player ===  randomChoice[3] && player2 === randomChoice[0]){
-    console.log(`Player 1 Wins`);
-}    
-else if(player ===  randomChoice[3] && player2 === randomChoice[1]){
-    console.log(`Player 1 Wins`);
-}    
-else if(player ===  randomChoice[3] && player2 === randomChoice[2]){
-    console.log(`Player 1 Wins`);
-}    
-})
-//!------------------------------------------------The Event Listener for Player 2--------------------------------------------------------------
-playBtn2.addEventListener('click', function Game2(){
-if(player2 === player){
-    console.log('Tie');
-}
-else if(computer === randomChoice[0] && player === randomChoice[1]){
-    console.log(`Player 1 Wins`);
-}
-else if(computer === randomChoice[0] && player === randomChoice[2]){
-    console.log(`Player 2 wins`);
-}
-else if(computer === randomChoice[0] && player === randomChoice[3]){
-    console.log(`Player 1 Wins`);
-}
-else if(player2 === randomChoice[1] &&  player === randomChoice[0]){
-    console.log(`Player 2 wins`);
-}
-else if(computer === randomChoice[1] && player === randomChoice[2]){
-    console.log(`Player 1 Wins`);
-}
-else if(player2 === randomChoice[1] &&  player === randomChoice[3]){
-    console.log(`Player 1 Wins`);
-}
-else if(player2 === randomChoice[2] &&  player === randomChoice[0]){
-    console.log(`Player 1 Wins`);
-}
-else if(player2 === randomChoice[2] &&  player === randomChoice[1]){
-    console.log(`Player 2 wins`);
-}
-else if(player2 === randomChoice[2] &&  player === randomChoice[3]){
-    console.log(`Player 1 Wins`);
-}
-else if(player2 === randomChoice[3] &&  player === randomChoice[0]){
-    console.log(`Player 2 wins`);
-}
-else if(player2 === randomChoice[3] &&  player === randomChoice[1]){
-    console.log(`Player 2 wins`);
-}
-else if(player2 === randomChoice[3] &&  player === randomChoice[2]){
-    console.log(`Player 2 wins`);
-}
-})
-
-
-
-
-
-=======
-const player = 'Player'
-const Computer = 'Computer'
-const Rock = 'Rock'
-const Scissor = 'Scissor'
-const Paper = 'Paper'
-const Boulder = 'Boulder'
-const generateVar = Math.floor(Math.random()*randomChoice.length)
-const randomChoice = [Rock, Paper, Scissor, Boulder]
-
-
-//! Set the array to spit out some random index number using Math.floor(Math.random()*4)
-//! Then set the random numer to a const random choice.
-//! Will have to set generateVar later 
-
-
-
-if(player == Computer){
-    console.log('Tie');
-}
-else if(player == [0]){
-    if(Computer == [1])
-    console.log('Player 2 Wins');
-}
-else(player == [0]){
-    if(c == [2]){
-    console.log('Player 1 Wins');
 }}
- if(player == [0]){
-    if(Computer == [3]){
-    console.log('Player 2 Wins');
-}}
-else(Computer == [0]){
-    player == [1]{
-    console.log('Player 2 Wins');
-}}
-if(Computer === [0]){
-    player ===[2]
-    console.log('Player 1 Wins');
+//!-------------------------------------------The Event Listener for Player---------------------------------------------------------
+function Game1(){
+    if(player === player2){
+        console.log('Tie');
+        isGameover = true
+        //alert(`Tie`)
+       
+    }
+    else if(player ===  randomChoice[0] && player2 === randomChoice[1]){
+        console.log(`Player 2 wins`);
+        isGameover = true
+        //alert(`Player 2 Wins by Paper`)
+        
+    }
+    else if(player === randomChoice[0] && player2 === randomChoice[2]){
+        console.log(`Player 1 Wins`);
+        isGameover = true
+        //alert(`Player 1 Wins by Rock`)
+    }
+    else if(player == randomChoice[0] && player2 === randomChoice[3]){
+        console.log(`Player 2 wins`);
+        isGameover = true
+        //alert(`Player 2 Wins by Boulder`)
+    }  
+    else if(player ===  randomChoice[1] && player2 === randomChoice[0]){
+        console.log(`Player 1 wins`);
+        isGameover = true
+        //alert(`Player 1 Wins by Paper`)
+    } 
+    else if(player ===  randomChoice[1] && player2 === randomChoice[2]){
+        console.log(`Player 2 wins`);
+        isGameover = true
+        //alert(`Player 2 Wins Scissors`)
+    }    
+    else if(player ===  randomChoice[1] && player2 === randomChoice[3]){
+        console.log(`Player 2 wins`);
+        isGameover = true
+        //alert(`Player 2 Wins by Boulder`)
+    }    
+    else if(player ===  randomChoice[2] && player2 === randomChoice[0]){
+        console.log(`Player 2 wins`);
+        isGameover = true
+        //alert(`Player 2 Wins by Rock`)
+    }    
+    else if(player ===  randomChoice[2] && player2 === randomChoice[1]){
+        console.log(`Player 2 wins`);
+        isGameover = true
+        //alert(`Player 2 Win by Paper`)
+    }    
+    else if(player ===  randomChoice[2] && player2 === randomChoice[3]){
+        console.log(`Player 2 wins`);
+        isGameover = true
+        //alert(`Player 2 Wins by Boulder`)
+    }
+    else if(player ===  randomChoice[3] && player2 === randomChoice[0]){
+        console.log(`Player 1 Wins`);
+        isGameover = true
+        //alert(`Player 1 Wins by Boulder`)
+    }    
+    else if(player ===  randomChoice[3] && player2 === randomChoice[1]){
+        console.log(`Player 1 Wins`);
+        isGameover = true
+        //alert(`Player 1 Wins by Boulder`)
+    }    
+    else if(player ===  randomChoice[3] && player2 === randomChoice[2]){
+        console.log(`Player 1 Wins`);
+        alert(`Player 1 Wins by Boulder`)
+        isGameover = true
+    }    
 }
-else(Computer === [0]){
-    if (player === [3]){
-    console.log('Player 1 wins');
-}}
+Game1()
+//!------------------------------------------------Buttons---------------------------------------------
+playBtn.addEventListener('click', function pleaseWork(){
+     if(isGameover === false){
+         player1Game()
+         player2Game()
+         Game1()
+     } else{
+         console.log('Game Over!');
+     }       
+}) 
 
-
-
-switch(generateVar){
-    case[0]:
-    console.log(Rock);
-        break;
-    case[1]:
-    console.log(Paper);
-        break;
-    case[2]:
-    console.log(Scissor);
-        break;
-    case[3]:
-    console.log(Boulder);
-        break;
-}
-
-
-
-Psuedo //! Will change to switch
-
-
->>>>>>> 6a740cee3c0fd596a9c29b17c2de43afba266efc
+resetBtn.addEventListener('click', function (){
+    location.reload()
+    }
+)
