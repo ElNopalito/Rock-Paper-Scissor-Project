@@ -10,5 +10,3 @@
 1.1 Optional: Player will sound off a cadence 4 syllables of R-P-S-B
 2. Player will press play and generate a variable
 3. RPSB will follows traditional rules of RPS but as aforementioned, Boulder will trump all.
-4. If Player wins, a congratulatory message will appear and if Player loses, a message will appear to shun Player.
-
