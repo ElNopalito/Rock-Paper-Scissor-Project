@@ -125,7 +125,7 @@ function Game1(){
     }    
     else if(player ===  randomChoice[3] && player2 === randomChoice[2]){
         console.log(`Player 1 Wins`);
-        alert(`Player 1 Wins by Boulder`)
+        //alert(`Player 1 Wins by Boulder`)
         isGameover = true
     }    
 }

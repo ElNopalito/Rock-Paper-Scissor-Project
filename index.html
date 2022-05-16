@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" src="./style.css">
     <title>Rock-Paper-Scissor-Boulder</title>
 </head>
 <body>
@@ -35,8 +34,52 @@
 </div>   
 </div>
 
+<style>
+body{
+    background-color: bisque;
+    text-align: center;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+#box{
+    color: blue;
+    width: 100px;
+    height: 100px;
+    margin:10px;
+}
 
 
+.game{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+.Player{
+    background-color: red;   
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    display: flexbox;
+    justify-content: space-around
+}
+#reset{
+    width: 150px;
+    height: 50px;
+}
+#playBtn{
+    width: 150px;
+    height: 50px;
+}
+
+.comp{
+    background-color: lawngreen;
+    width: 200px;
+    height: 100px;
+    margin:10px;
+    display: flexbox;
+    justify-content: space-around;
+}
+</style>
 
 <script src="./project.js"></script>
 </body>
